@@ -1,0 +1,58 @@
+ while ($row_musicby = $resultnodp_musicby->fetch_assoc()) {
+                    $tempID = $row_musicby['id'];
+                    $tempFirst = $row_musicby['MusicbyFirst'];
+                    $tempLast = $row_musicby['MusicbyLast'];
+                    $tempMiddle = $row_musicby['MusicbyMiddle'];
+                    $sql_ins = "INSERT INTO musicby VALUES ($tempID,'$tempFirst','$tempLast','$tempMiddle')";
+                    if (!mysqli_query($con, $sql_ins)) {
+                        die('Error: ' . mysqli_error($con));
+                    }
+                }
+                while ($row_productioncompany = $resultnodp_productioncompany->fetch_assoc()) {
+                    $tempID = $row_productioncompany['id'];
+                    $tempCompany = $row_productioncompany['ProductionCompany'];
+                    $sql_ins = "INSERT INTO productioncompany VALUES ($tempID,'$tempCompany')";
+                    if (!mysqli_query($con, $sql_ins)) {
+                        die('Error: ' . mysqli_error($con));
+                    }
+                }
+                while ($row_producedby = $resultnodp_producedby->fetch_assoc()) {
+                    $tempID = $row_producedby['id'];
+                    $tempFirst = $row_producedby['ProducedbyFirst'];
+                    $tempLast = $row_producedby['ProducedbyLast'];
+                    $tempMiddle = $row_producedby['ProducedbyMiddle'];
+                    $sql_ins = "INSERT INTO producedby VALUES ($tempID,'$tempFirst','$tempLast','$tempMiddle')";
+                    if (!mysqli_query($con, $sql_ins)) {
+                        die('Error: ' . mysqli_error($con));
+                    }
+                }
+                while ($row_starring = $resultnodp_starring->fetch_assoc()) {
+                    $tempID = $row_starring['id'];
+                    $tempFirst = $row_starring['StarringFirst'];
+                    $tempLast = $row_starring['StarringLast'];
+                    $tempMiddle = $row_starring['StarringMiddle'];
+                    $sql_ins = "INSERT INTO starring VALUES ($tempID,'$tempFirst','$tempLast','$tempMiddle')";
+                    if (!mysqli_query($con, $sql_ins)) {
+                        die('Error: ' . mysqli_error($con));
+                    }
+                }
+                while ($row_storyby = $resultnodp_storyby->fetch_assoc()) {
+                    $tempID = $row_storyby['id'];
+                    $tempFirst = $row_storyby['StorybyFirst'];
+                    $tempLast = $row_storyby['StorybyLast'];
+                    $tempMiddle = $row_storyby['StorybyMiddle'];
+                    $sql_ins = "INSERT INTO storyby VALUES ($tempID,'$tempFirst','$tempLast','$tempMiddle')";
+                    if (!mysqli_query($con, $sql_ins)) {
+                        die('Error: ' . mysqli_error($con));
+                    }
+                }
+                while ($row_writtenby = $resultnodp_writtenby->fetch_assoc()) {
+                    $tempID = $row_writtenby['id'];
+                    $tempFirst = $row_writtenby['WrittenbyFirst'];
+                    $tempLast = $row_writtenby['WrittenbyLast'];
+                    $tempMiddle = $row_writtenby['WrittenbyMiddle'];
+                    $sql_ins = "INSERT INTO writtenby VALUES ($tempID,'$tempFirst','$tempLast','$tempMiddle')";
+                    if (!mysqli_query($con, $sql_ins)) {
+                        die('Error: ' . mysqli_error($con));
+                    }
+                }
